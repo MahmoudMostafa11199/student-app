@@ -14,7 +14,11 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://student-app-ekva.vercel.app',
+  }),
+);
 app.use(express.json());
 
 // Routes
